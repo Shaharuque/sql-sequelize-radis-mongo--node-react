@@ -43,7 +43,7 @@ Now copy all the files you have in the `/server/sql` to the `/server/orm` folder
 
 ## 3. Mongo
 
-Start by reading this MongoDB [tutorial](https://www.tutorialspoint.com/mongodb/) and [introduction](https://scotch.io/tutorials/an-introduction-to-mongodb).
+Start by reading this MongoDB [tutorial](https://www.tutorialspoint.com/mongodb/) and [introduction](https://www.mongodb.com/docs/manual/tutorial/getting-started/).
 
 Install Mongo, then through the CLI list what collections are available. Here you don’t need to create a new collection for your app before proceeding. In fact, when you ask Mongo to insert a document in a collection that doesn’t exist, it automatically creates it for you.
 
