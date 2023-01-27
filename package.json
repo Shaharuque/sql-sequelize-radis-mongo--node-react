@@ -1,6 +1,6 @@
 {
   "name": "codeworks-chat-server-db-exercise",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "A Codeworks exercise to train students",
   "main": "index.js",
   "repository": {
