@@ -13,7 +13,7 @@ app.use(
   })
 );
 
-app.use("/api/v1/inadmin/auth", cptRoute);
+app.use("/api/v1", cptRoute);
 
 const PORT =  8080;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
