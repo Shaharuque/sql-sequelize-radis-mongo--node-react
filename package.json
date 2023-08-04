@@ -35,5 +35,10 @@
     "hooks": {
       "pre-commit": "gulp lint"
     }
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "koa": "^2.14.2",
+    "mongoose": "^7.4.2"
   }
 }
