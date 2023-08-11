@@ -6,7 +6,7 @@ exports.userCreate = async (ctx) => {
     console.log(name, userId);
     await User.create({ name, userId });
     ctx.status = 200;
-    ctx.body = "user created";
+    ctx.body = {name,userId};
   } catch (err) {
     ctx.body = err;
     ctx.status = 500;
@@ -29,9 +29,12 @@ exports.deleteUser = async (ctx) => {
   try {
     const { userId } = ctx.request.body;
     console.log(userId);
-    await User.deleteOne({ _id: userId });
+    await User.deleteOne({ userId: userId });
     ctx.status = 200;
-    ctx.body = "user deleted";
+    ctx.body = {
+      message: "User deleted successfully",
+      success:true
+    };
   } catch (err) {
     ctx.status = 500;
     ctx.body = err;
@@ -42,6 +45,7 @@ exports.updateUser = async (ctx) => {
   try {
     const  updateId = ctx.params.id;
     const updatedFields = ctx.request.body;
+    console.log('=====>',updateId,updatedFields)
 
     const updateUser = await User.findByIdAndUpdate(
       updateId,
